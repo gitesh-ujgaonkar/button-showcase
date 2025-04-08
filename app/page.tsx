@@ -1,9 +1,6 @@
-import dynamic from "next/dynamic"
-
-// Use dynamic import with no SSR for the component with client-side JavaScript
-const ButtonShowcaseWithJS = dynamic(() => import("./page-with-js"), { ssr: false })
+import ClientWrapper from "./client-wrapper"
 
 export default function Page() {
-  return <ButtonShowcaseWithJS />
+  return <ClientWrapper />
 }
 
