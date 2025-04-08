@@ -1,0 +1,552 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic Button Styles */
+button {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  min-height: 48px;
+}
+
+/* Basic Buttons */
+.btn-basic-1 {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-basic-1:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-basic-2 {
+  background-color: white;
+  color: #111827;
+  border: 2px solid #e5e7eb;
+}
+
+.btn-basic-2:hover {
+  border-color: #d1d5db;
+  background-color: #f9fafb;
+}
+
+.btn-basic-3 {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-basic-3:hover {
+  background-color: #059669;
+  letter-spacing: 1px;
+}
+
+.btn-basic-4 {
+  background-color: #f59e0b;
+  color: white;
+  border-radius: 24px;
+}
+
+.btn-basic-4:hover {
+  background-color: #d97706;
+  box-shadow: 0 0 0 5px rgba(245, 158, 11, 0.3);
+}
+
+.btn-basic-5 {
+  background-color: #8b5cf6;
+  color: white;
+  box-shadow: 0 4px 6px rgba(139, 92, 246, 0.25);
+}
+
+.btn-basic-5:hover {
+  box-shadow: 0 10px 15px rgba(139, 92, 246, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Gradient Buttons */
+.btn-gradient-1 {
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  color: white;
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+}
+
+.btn-gradient-1:hover {
+  background-position: 100% 100%;
+  transition: background-position 0.5s ease;
+}
+
+.btn-gradient-2 {
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  color: white;
+}
+
+.btn-gradient-2:hover {
+  background: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+
+.btn-gradient-3 {
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  color: white;
+  background-size: 1400% 100%;
+  animation: rainbow-static 4s ease infinite;
+}
+
+.btn-gradient-3:hover {
+  animation: rainbow 4s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes rainbow-static {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.btn-gradient-4 {
+  background-color: #111827;
+  color: #10b981;
+  border: 1px solid #10b981;
+  box-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+}
+
+.btn-gradient-4:hover {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+  text-shadow: 0 0 5px rgba(16, 185, 129, 0.8);
+}
+
+.btn-gradient-5 {
+  background: linear-gradient(45deg, #fecaca, #bfdbfe, #c7d2fe, #ddd6fe);
+  color: #4b5563;
+  background-size: 300% 300%;
+}
+
+.btn-gradient-5:hover {
+  background-size: 100% 100%;
+  color: #1f2937;
+}
+
+/* 3D Buttons */
+.btn-3d-1 {
+  background-color: #ef4444;
+  color: white;
+  box-shadow: 0 6px 0 #b91c1c;
+  transform: translateY(-4px);
+}
+
+.btn-3d-1:hover {
+  transform: translateY(0);
+}
+
+.btn-3d-1:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #b91c1c;
+}
+
+.btn-3d-2 {
+  background-color: #3b82f6;
+  color: white;
+  transform: perspective(500px) rotateX(0deg);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-3d-2:hover {
+  transform: perspective(500px) rotateX(15deg);
+  box-shadow: 0 20px 30px rgba(59, 130, 246, 0.4);
+}
+
+.btn-3d-3 {
+  background-color: white;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  box-shadow: -5px -5px 0 -2px white, -5px -5px 0 0 #3b82f6, 5px 5px 0 -2px white, 5px 5px 0 0 #3b82f6;
+}
+
+.btn-3d-3:hover {
+  box-shadow: -8px -8px 0 -2px white, -8px -8px 0 0 #3b82f6, 8px 8px 0 -2px white, 8px 8px 0 0 #3b82f6;
+}
+
+.btn-3d-4 {
+  background-color: #10b981;
+  color: white;
+  border-bottom: 6px solid #059669;
+}
+
+.btn-3d-4:hover {
+  background-color: #059669;
+}
+
+.btn-3d-4:active {
+  border-bottom-width: 2px;
+  transform: translateY(4px);
+}
+
+.btn-3d-5 {
+  background-color: #8b5cf6;
+  color: white;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.btn-3d-5:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Border Effect Buttons */
+.btn-border-1 {
+  background-color: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-border-1:hover {
+  color: white;
+}
+
+.btn-border-1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #3b82f6;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.btn-border-1:hover::after {
+  width: 100%;
+}
+
+.btn-border-2 {
+  background-color: transparent;
+  color: #ec4899;
+  position: relative;
+}
+
+.btn-border-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #ec4899;
+  transition: all 0.3s ease;
+}
+
+.btn-border-2:hover::before {
+  transform: rotate(10deg);
+  border-color: #db2777;
+}
+
+.btn-border-3 {
+  background-color: transparent;
+  color: #10b981;
+  border: 2px solid #10b981;
+}
+
+.btn-border-3:hover {
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.3);
+}
+
+.btn-border-4 {
+  background-color: transparent;
+  color: #f59e0b;
+  position: relative;
+  border: 2px solid #f59e0b;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-border-4::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 200%;
+  height: 200%;
+  background-color: #f59e0b;
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.btn-border-4:hover {
+  color: white;
+}
+
+.btn-border-4:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-border-5 {
+  background-color: transparent;
+  color: #8b5cf6;
+  border: 2px solid #8b5cf6;
+  animation: border-pulse 2s infinite;
+}
+
+.btn-border-5:hover {
+  animation: border-pulse 1s infinite;
+}
+
+@keyframes border-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+  }
+}
+
+/* Icon Buttons */
+.btn-icon-1 {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-icon-1 .icon {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-icon-1:hover .icon {
+  transform: translateX(5px);
+}
+
+.btn-icon-2 {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-icon-2 .icon {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-icon-2:hover .icon {
+  transform: rotate(90deg);
+}
+
+.btn-icon-3 {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.btn-icon-3 .icon {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-icon-3:hover .icon {
+  animation: bounce 0.6s ease infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+.btn-icon-4 {
+  background-color: #ec4899;
+  color: white;
+}
+
+.btn-icon-4 .icon {
+  margin-right: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-icon-4:hover .icon {
+  opacity: 1;
+}
+
+.btn-icon-5 {
+  background-color: #8b5cf6;
+  color: white;
+}
+
+.btn-icon-5 .icon {
+  margin-right: 8px;
+  transition: transform 0.5s ease;
+}
+
+.btn-icon-5:hover .icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animated Buttons */
+.btn-animated-1 {
+  background-color: #3b82f6;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-animated-1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.btn-animated-1:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
+
+.btn-animated-2 {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-animated-2:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-animated-3 {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.btn-animated-3:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.btn-animated-4 {
+  background-color: #ec4899;
+  color: white;
+  position: relative;
+}
+
+.btn-animated-4:hover {
+  animation: glitch 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes glitch {
+  0% {
+    transform: skew(0deg);
+    text-shadow: 2px 0 0 #00fffc, -2px 0 0 #fc00ff;
+  }
+  25% {
+    transform: skew(1deg);
+    text-shadow: -2px 0 0 #00fffc, 2px 0 0 #fc00ff;
+  }
+  50% {
+    transform: skew(-1deg);
+    text-shadow: 2px 0 0 #00fffc, -2px 0 0 #fc00ff;
+  }
+  100% {
+    transform: skew(0deg);
+    text-shadow: -2px 0 0 #00fffc, 2px 0 0 #fc00ff;
+  }
+}
+
+.btn-animated-5 {
+  background-color: #8b5cf6;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+/* The magnetic effect will be added with JavaScript */
+
